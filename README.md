@@ -1,6 +1,6 @@
-#Importing and exporting cultures
+# Importing and exporting cultures
 
-####Update: wrote a blog post on this issue http://claus.nu/blog/importing-custom-cultures-on-an-azure-vm/####
+#### Update: wrote a blog post on this issue http://claus.nu/blog/importing-custom-cultures-on-an-azure-vm/####
 
 We had an issue where a site needed to use cultures that did not exist on our Azure VMs (Windows Server 2012 R2).
 
