@@ -14,7 +14,7 @@ namespace Cultures.CmdLine
         public int Action()
         {
             var message = "\nListing all cultures installed on this machine:";
-            var c = CultureInfo.GetCultures(CultureTypes.AllCultures);
+            var c = CultureInfo.GetCultures(CultureTypes.AllCultures).Where(x => x.Name.Count(y => y == '-') == 1).ToArray();
             if (string.IsNullOrWhiteSpace(StartsWith) == false)
             {
                 c = c.Where(x => x.Name.ToLowerInvariant().StartsWith(StartsWith.ToLowerInvariant())).ToArray();
