@@ -13,11 +13,14 @@ namespace Cultures.CmdLine
             //args = new[] { "import", "-c", "c:\\temp\\cult\\ru-zz.culture" };
             //args = new[] { "import", "-c", "ru-zz.culture" };
             //args = new[] { "importfolder", "c:\\temp\\cult" };
-            var result = Parser.Default.ParseArguments<List, Export, Import, ImportFolder, Remove>(args);
+            //args = new[] { "exportall", "c:\\temp\\test" };
+            //args = new[] { "exportall" };
+            var result = Parser.Default.ParseArguments<List, Export, ExportAll, Import, ImportFolder, Remove>(args);
             var exitCode = result
-              .MapResult<List, Export, Import, ImportFolder, Remove, object>(
+              .MapResult<List, Export, ExportAll, Import, ImportFolder, Remove, object>(
                 list => list.Action(),
                 export => export.Action(),
+                exportAll => exportAll.Action(),
                 import => import.Action(),
                 importFolder => importFolder.Action(),
                 remove => remove.Action(),

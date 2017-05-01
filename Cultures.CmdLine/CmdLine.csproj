@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Export.cs" />
+    <Compile Include="ExportAll.cs" />
     <Compile Include="ImportFolder.cs" />
     <Compile Include="Remove.cs" />
     <Compile Include="List.cs" />
